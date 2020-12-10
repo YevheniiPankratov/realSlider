@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: black;
+}
+
+.head {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.str {
+    font-size: 50px;
+    height: 75px;
+    width: 75px;
+    background-color: slategray;
+    border-radius: 75px;
+}
+
+.str .prev {
+    padding-left: 40px;
+}
+
+.wrapper {
+    background: url(/Crumpled-Paper.jpg) center no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 696px;
+}
+
+.photo img {
+    background: url(/123.png) center no-repeat;
+    background-size: cover;
+    width: 600px;
+    height: 600px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.active {
+    display: block;
+}
+
+.none {
+    display: none;
+}
