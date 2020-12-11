@@ -1,51 +1,74 @@
 * {
     padding: 0;
     margin: 0;
-    color: black;
+    color: whitesmoke;
+    font-family: 'Langar', cursive;
 }
 
 .head {
     display: flex;
     justify-content: center;
-    padding: 20px 0;
-}
-
-.str {
+    padding: 7px 0;
     font-size: 50px;
-    height: 75px;
-    width: 75px;
-    background-color: slategray;
-    border-radius: 75px;
-}
-
-.str .prev {
-    padding-left: 40px;
-}
-
-.wrapper {
-    background: url(/Crumpled-Paper.jpg) center no-repeat;
-    background-size: cover;
-    width: 100%;
-    min-height: 696px;
-}
-
-.photo img {
-    background: url(/123.png) center no-repeat;
-    background-size: cover;
-    width: 600px;
-    height: 600px;
 }
 
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    width: 580px;
+    margin: 0 auto;
 }
 
-.active {
-    display: block;
+.wrapper {
+    background: url(/maxresdefault.jpg) center no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 696px;
+    position: static;
 }
 
-.none {
-    display: none;
+.photo img {
+    background-size: cover;
+    width: 580px;
+    height: 580px;
+}
+
+.photo {
+    animation-name: fade;
+    animation-duration: 1.4s;
+}
+
+.container .next,.container .prev {
+    cursor: pointer;
+    position: absolute;
+    font-size: 40px;
+    color: black;
+    background-color: white;
+    border-radius: 50px;
+    width: 40px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: .7;
+}
+
+.container .next {
+    right: 0;
+}
+
+.container .prev {
+    left: 0;
+}
+
+@keyframes fade {
+    /* Устанавливаем и изменяем степень прозрачности: */
+    from {
+        opacity: 0.7
+    }
+    to {
+        opacity: 1
+    }
 }

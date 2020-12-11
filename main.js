@@ -1,7 +1,6 @@
 let prev = document.querySelector('.prev'),
     next = document.querySelector('.next');
 
-
 let slideIndex = 1;
 
 showSlides(slideIndex);
@@ -14,22 +13,19 @@ function prevSlide() {
     showSlides(slideIndex -= 1)
 }
 
+next.addEventListener('click', nextSlide)
+prev.addEventListener('click', prevSlide)
 
 function showSlides(n) {
-    let photo = document.querySelectorAll('.photo');
+    let slides = document.querySelectorAll('.photo');
 
-    if (n > photo.length) {
+    if (n > slides.length) {
         slideIndex = 1
     }
     if (n < 1) {
-        slideIndex = photo.length;
+        slideIndex = slides.length;
     }
 
-    photo.forEach(item => {
-        item.style.display = "none";
-    })
-    photo[slideIndex - 1].style.display = "block"; 
+    slides.forEach(item => item.style.display = "none");
+    slides[slideIndex - 1].style.display = "block";
 }
-
-next.addEventListener('click', nextSlide)
-prev.addEventListener('click', prevSlide)
